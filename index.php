@@ -3,17 +3,17 @@
     </head>
     <body>
         <script src="lib/jquery-3.2.0.min.js"></script>
-        <div id="content"></div>
+        <div id="content" style='font-size:1.5em'></div>
     </body>
     
     <script>
         var values = [];
-        var output
+        var output = ''
         var retourALaLigne = 0
         $( document ).ready(function() {
             function timer(){
                 $.get( "sensor/receiveValueSensor.php", function( data ) {
-                    if (data !== undefined && data !== 0) {
+                    if (data !== 0) {
                         retourALaLigne = retourALaLigne + 1;
                         values.push(data);
                         if (retourALaLigne === 20) {
