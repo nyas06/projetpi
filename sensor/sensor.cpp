@@ -29,6 +29,8 @@ using namespace std;
 	digitalWrite(TRIG,LOW);
     cout << "trig low" << endl;
 
+    int i=0;
+    while(i<10){
     digitalWrite(TRIG,HIGH);
     usleep(10);
     digitalWrite(TRIG,LOW);
@@ -45,7 +47,7 @@ using namespace std;
     cout << "echo a 0" << endl;
     pulseInterval=pulseStart-pulseStop;
     distance = pulseInterval*0.170;
-	cout << distance << endl;
-	
-	
+	cout << distance << " mm"<<endl;
+	usleep(1000000);
+    }
   }  // fin fonction main
