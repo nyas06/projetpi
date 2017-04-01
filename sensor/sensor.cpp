@@ -21,7 +21,7 @@ using namespace std;
 	if(wiringPiSetup() == -1) {cout << "--> Erreur WiringPI " << endl;return -1;}
 	// activation des ports GPIO
 	pinMode(TRIG, OUTPUT);
-	pinMode(ECHO, INTPUT);
+	pinMode(ECHO, INPUT);
 	
 	// declaration des variables repetition, selection selcal civil ou militaire,poste HF et indicatif
 	unsigned int pulseStart,pulseStop,pulseInterval,distance;
