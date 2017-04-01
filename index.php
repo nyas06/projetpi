@@ -13,18 +13,20 @@
         $( document ).ready(function() {
             function timer(){
                 $.get( "sensor/receiveValueSensor.php", function( data ) {
-                    retourALaLigne = retourALaLigne + 1;
-                    values.push(data);
-                    if (retourALaLigne === 40) {
-                        retourALaLigne = 0
-                        output += data+',<br>';
-                    } else {
-                        output += data+',';
-                    }
-                    $( "#content" ).html(output);                  
+                    if (data) {
+                        retourALaLigne = retourALaLigne + 1;
+                        values.push(data);
+                        if (retourALaLigne === 20) {
+                            retourALaLigne = 0
+                            output += data+',<br>';
+                        } else {
+                            output += data+',';
+                        }
+                        $( "#content" ).html(output);
+                    }                
                 });
             }
-            setInterval(timer,500);
+            setInterval(timer,200);
         });
     </script>
 </html>
