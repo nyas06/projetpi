@@ -9,7 +9,7 @@
     <script>
         $( document ).ready(function() {
             function timer(){
-                $('#content').html("<?=exec('sudo python ../prod/testSensor2.py')." cm ".date()?>");
+                $('#content').html("<?=exec('sudo python ../prod/testSensor2.py')." cm ".date("d/m/Y H:i:s")?>");
             }
             setInterval(timer,1000);
         });
