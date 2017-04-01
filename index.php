@@ -1,10 +1,11 @@
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
     </head>
     <body>
         <script src="lib/jquery-3.2.0.min.js"></script>
         <!--<div id="content" style='font-size:1.5em'></div>-->
-        <div id="cercle" class="cercle"></div>
+        <div id="cercle"></div>
     </body>
     
     <script>
