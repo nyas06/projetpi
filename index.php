@@ -13,7 +13,7 @@
         $( document ).ready(function() {
             function timer(){
                 $.get( "sensor/receiveValueSensor.php", function( data ) {
-                    if (data) {
+                    if (data !== undefined && data !== 0) {
                         retourALaLigne = retourALaLigne + 1;
                         values.push(data);
                         if (retourALaLigne === 20) {
