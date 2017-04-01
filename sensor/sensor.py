@@ -13,7 +13,7 @@ pulse_end = time.time()
 
 GPIO.output(TRIG, False)                 #Set
 
-#time.sleep(0.2)                           #Delay of 2 seconds
+time.sleep(0.2)                           #Delay of 2 seconds
 
 GPIO.output(TRIG, True)                  #Set TRIG as HIGH
 time.sleep(0.0001)                      #Delay of 0.00001 seconds
