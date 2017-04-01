@@ -1,1 +1,1 @@
-<?=exec("sudo g++ -Wall sensor/sensor.cpp -o  sensor/sensor -lwiringPi")?>
+<?php `sudo g++ -Wall sensor/sensor.cpp -o  sensor/sensor -lwiringPi`;
