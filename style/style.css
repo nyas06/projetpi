@@ -1,5 +1,8 @@
 #cercle{
+  margin: 100px auto 0 auto;
   background:#bfd70e;
   border-radius:50%;
+  width:320px;
+  height:320px;
   border:2px solid #679403; 
 }

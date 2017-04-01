@@ -15,7 +15,7 @@
         $( document ).ready(function() {
             function timer(){
                 $.get( "sensor/receiveValueSensor.php", function( data ) {
-                    if (data !== '0') {
+                    if (data >= 2) {
                         /*
                         retourALaLigne = retourALaLigne + 1;
                         //values.push(data);
