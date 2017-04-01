@@ -1,1 +1,1 @@
-<?=exec('g++ -Wall sensor/sensor.cpp -o  sensor/sensor -lwiringPi')?>
+<?=exec("g++ -Wall sensor/sensor.cpp -o  sensor/sensor -lwiringPi")?>
