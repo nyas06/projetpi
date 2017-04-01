@@ -3,7 +3,8 @@
     </head>
     <body>
         <script src="lib/jquery-3.2.0.min.js"></script>
-        <div id="content" style='font-size:1.5em'></div>
+        <!--<div id="content" style='font-size:1.5em'></div>-->
+        <div id="cercle"></div>
     </body>
     
     <script>
@@ -14,6 +15,7 @@
             function timer(){
                 $.get( "sensor/receiveValueSensor.php", function( data ) {
                     if (data !== '0') {
+                        /*
                         retourALaLigne = retourALaLigne + 1;
                         //values.push(data);
                         if (retourALaLigne === 20) {
@@ -23,6 +25,8 @@
                             output += data+',';
                         }
                         $( "#content" ).html(output);
+                        */
+                        $( "#cercle" ).css({"width": (data*2)+"px", "height": (data*2)+"px"});
                     }                
                 });
             }
