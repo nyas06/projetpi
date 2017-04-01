@@ -9,15 +9,22 @@
     <script>
         var values = [];
         var output
+        var retourALaLigne = 0
         $( document ).ready(function() {
             function timer(){
                 $.get( "sensor/receiveValueSensor.php", function( data ) {
+                    retourALaLigne = retourALaLigne + 1;
                     values.push(data);
-                    output += data+',';
+                    if (retourALaLigne === 40) {
+                        retourALaLigne = 0
+                        output += data+',<br>';
+                    } else {
+                        output += data+',';
+                    }
                     $( "#content" ).html(output);                  
                 });
             }
-            setInterval(timer,200);
+            setInterval(timer,500);
         });
     </script>
 </html>
