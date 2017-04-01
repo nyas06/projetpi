@@ -46,8 +46,10 @@ using namespace std;
         pulseStop=micros();
     }
     
-    pulseInterval=pulseStart-pulseStop;
+    pulseInterval= pulseStart-pulseStop;
     distance = pulseInterval*0.170;
+    cout << "pulsestart: "<< pulseStart << " mm"<<endl;
+    cout << "pulsestop: "<< pulseStop << " mm"<<endl;
 	cout << distance << " mm"<<endl;
 	usleep(1000000);
     }
