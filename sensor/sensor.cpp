@@ -16,35 +16,36 @@ using namespace std;
 		cerr << "Le droit root est obligatoire" << endl;
 		return -1;
 	}
-    cout << "debut programme" << endl;
+    
     // initialisation de la librairie GPIO
 	if(wiringPiSetup() == -1) {cout << "--> Erreur WiringPI " << endl;return -1;}
 	// activation des ports GPIO
 	pinMode(TRIG, OUTPUT);
 	pinMode(ECHO, INPUT);
-	cout << "fin init" << endl;
+	
 	// declaration des variables repetition, selection selcal civil ou militaire,poste HF et indicatif
 	unsigned int pulseStart,pulseStop,pulseInterval,distance;
 
 	digitalWrite(TRIG,LOW);
-    cout << "trig low" << endl;
+    
 
     int i=0;
     while(i<10){
+    i++;
     digitalWrite(TRIG,HIGH);
     usleep(10);
     digitalWrite(TRIG,LOW);
-    cout << "trig envoyer" << endl;
+    
 	// initialisation de la librairie audio
-    cout << "trig low" << endl;
+    
 	while(digitalRead(ECHO)==0){
         pulseStart=micros();
     }
-    cout << "echo a 1" << endl;
+    
     while(digitalRead(ECHO)==1){
         pulseStop=micros();
     }
-    cout << "echo a 0" << endl;
+    
     pulseInterval=pulseStart-pulseStop;
     distance = pulseInterval*0.170;
 	cout << distance << " mm"<<endl;
