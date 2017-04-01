@@ -27,7 +27,7 @@
                         }
                         $( "#content" ).html(output);
                         */
-                        $( "#cercle" ).css({"width": (data*2)+"px", "height": (data*2)+"px"});
+                        $( "#cercle" ).css({"width": data*2, "height": data*2});
                     }                
                 });
             }
