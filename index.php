@@ -6,7 +6,7 @@
         <h1>valeur capteur</h1>
         <p>
             <?=exec('sudo python testSensor2.py')." cm"?>
-            test
+            test 2
         </p>
     </body>
 </html>
