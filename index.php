@@ -4,7 +4,7 @@
     <body>
         <script src="lib/jquery-3.2.0.min.js"></script>
         <!--<div id="content" style='font-size:1.5em'></div>-->
-        <div id="cercle"></div>
+        <div id="cercle" class="cercle"></div>
     </body>
     
     <script>
