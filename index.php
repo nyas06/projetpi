@@ -9,7 +9,9 @@
     <script>
         $( document ).ready(function() {
             function timer(){
-                $('#content').html("<?=exec('sudo python ../prod/testSensor2.py')." cm ".date("d/m/Y H:i:s")?>");
+                $.get( "receiveValueSensor/receiveValueSensor.php", function( data ) {
+                    $( "#content" ).html( data );
+                });
             }
             setInterval(timer,1000);
         });

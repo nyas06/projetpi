@@ -1,0 +1,1 @@
+<?=exec('sudo python ../prod/testSensor2.py')." cm ".date("d/m/Y H:i:s")?>
