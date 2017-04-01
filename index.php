@@ -7,13 +7,17 @@
     </body>
     
     <script>
+        var values = [];
+        var output
         $( document ).ready(function() {
             function timer(){
-                $.get( "receiveValueSensor/receiveValueSensor.php", function( data ) {
-                    $( "#content" ).html( data );
+                $.get( "sensor/receiveValueSensor.php", function( data ) {
+                    values.push(data);
+                    output += data+',';
+                    $( "#content" ).html(output);                  
                 });
             }
-            setInterval(timer,1000);
+            setInterval(timer,200);
         });
     </script>
 </html>
