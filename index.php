@@ -7,15 +7,15 @@
     </body>
     
     <script>
-        var values = [];
+        //var values = [];
         var output = ''
         var retourALaLigne = 0
         $( document ).ready(function() {
             function timer(){
                 $.get( "sensor/receiveValueSensor.php", function( data ) {
-                    if (data !== 0) {
+                    if (data !== '0') {
                         retourALaLigne = retourALaLigne + 1;
-                        values.push(data);
+                        //values.push(data);
                         if (retourALaLigne === 20) {
                             retourALaLigne = 0
                             output += data+',<br>';
@@ -26,7 +26,7 @@
                     }                
                 });
             }
-            setInterval(timer,200);
+            setInterval(timer,500);
         });
     </script>
 </html>
