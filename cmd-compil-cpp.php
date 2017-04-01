@@ -1,1 +1,1 @@
-<?php `g++ -Wall sensor.cpp -o  sensor -lwiringPi`;
+<?php `g++ -Wall sensor/sensor.cpp -o  sensor/sensor -lwiringPi`;
