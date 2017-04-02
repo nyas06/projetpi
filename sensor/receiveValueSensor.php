@@ -1,1 +1,1 @@
-<?php `sudo ./sensor` ; 
+<?php echo exec('sudo ./sensor'); ?>
