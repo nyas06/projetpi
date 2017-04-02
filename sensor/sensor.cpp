@@ -46,6 +46,6 @@ using namespace std;
     pulseInterval= pulseStop-pulseStart;
     distance = pulseInterval*0.0170;
 	cout << distance <<endl;
-	usleep(1000000);
+	
     
   }  // fin fonction main
