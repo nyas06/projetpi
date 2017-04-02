@@ -31,7 +31,7 @@
                     }                
                 });
             }
-            setInterval(timer,100);
+            setInterval(timer,200);
         });
     </script>
 </html>
