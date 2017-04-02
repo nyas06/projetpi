@@ -1,1 +1,1 @@
-<?=intvalexec('sudo ./sensor))?>
+<?=intvalexec('sudo ./sensor)?>
