@@ -29,9 +29,6 @@ using namespace std;
 	digitalWrite(TRIG,LOW);
     
 
-    int i=0;
-    
-    i++;
     digitalWrite(TRIG,HIGH);
     usleep(10);
     digitalWrite(TRIG,LOW);
@@ -47,8 +44,8 @@ using namespace std;
     }
     
     pulseInterval= pulseStop-pulseStart;
-    distance = pulseInterval*0.170;
-	cout << distance << " mm "<<endl;
+    distance = pulseInterval*0.0170;
+	cout << distance <<endl;
 	usleep(1000000);
     
   }  // fin fonction main
