@@ -1,1 +1,1 @@
-<?=intvalexec('sudo ./sensor)?>
+<?php `sudo ./sensor` ; 
