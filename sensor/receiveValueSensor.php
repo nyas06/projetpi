@@ -1,2 +1,2 @@
-<?php echo exec('sudo ./sensor'); ?>
+<?=intval(exec('sudo ./sensor')) ?>
 
