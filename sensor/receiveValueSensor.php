@@ -1,1 +1,1 @@
-<?=intval(exec('sudo python sensor.py'))?>
+<?=intval(exec('sudo sensor))?>
